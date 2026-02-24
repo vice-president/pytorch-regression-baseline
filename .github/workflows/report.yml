@@ -1,0 +1,26 @@
+name: Training Report
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify-and-export:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Run training
+        run: |
+          mkdir -p results
+          python train.py | tee results/run_log.txt
+      - name: Upload result artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: training-results
+          path: results/
