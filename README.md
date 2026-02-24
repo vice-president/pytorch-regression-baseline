@@ -36,3 +36,19 @@ B --> C[Train PyTorch model]
 C --> D[Evaluate metrics]
 D --> E[Save plots + logs]
 ```
+
+
+## Advanced Student Track
+
+For students who want to move beyond a baseline script, this repo now includes:
+
+- `train_advanced.py` (regularization + scheduler + early stopping + k-fold CV)
+- `ADVANCED_CONCEPTS.md` (concept-by-concept explanation)
+
+Run:
+
+```bash
+python train_advanced.py
+```
+
+Outputs `advanced_metrics.json` with both holdout and cross-validation results.
