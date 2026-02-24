@@ -1,0 +1,6 @@
+epoch=10 train_mse=0.8020 val_mse=0.7241 val_mae=0.6696
+epoch=20 train_mse=0.5646 val_mse=0.5162 val_mae=0.5630
+epoch=30 train_mse=0.3545 val_mse=0.3293 val_mae=0.4498
+epoch=40 train_mse=0.1824 val_mse=0.1744 val_mae=0.3292
+epoch=50 train_mse=0.0724 val_mse=0.0741 val_mae=0.2174
+epoch=60 train_mse=0.0285 val_mse=0.0332 val_mae=0.1450
